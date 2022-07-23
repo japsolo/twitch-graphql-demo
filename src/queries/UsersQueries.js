@@ -1,0 +1,13 @@
+export const UsersQueries = {
+    insertUsers: `
+        mutation Insert_users($objects: [users_insert_input!]!) {
+            insert_users(objects: $objects) {
+                affected_rows
+                returning {
+                    id
+                    name
+                }
+            }
+        }
+    `,
+}
